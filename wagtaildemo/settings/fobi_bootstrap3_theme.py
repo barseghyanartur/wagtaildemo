@@ -1,5 +1,9 @@
 from .dev import *
 
+
+def gettext(s):
+    return s
+
 # Django settings for django-fobi integration project.
 
 INSTALLED_APPS += (
@@ -135,3 +139,71 @@ TEMPLATES[0]['OPTIONS']['context_processors'] += [
     "fobi.context_processors.dynamic_values",  # Optional
     # "context_processors.testing",  # Testing
 ]
+
+
+# **************************************************************
+# ************************ Fobi settings ***********************
+# **************************************************************
+
+# Fobi custom theme data for to be displayed in third party apps
+# like `django-registraton`.
+FOBI_CUSTOM_THEME_DATA = {
+    'bootstrap3': {
+        'page_header_html_class': '',
+        'form_html_class': 'form-horizontal',
+        'form_button_outer_wrapper_html_class': 'control-group',
+        'form_button_wrapper_html_class': 'controls',
+        'form_button_html_class': 'btn',
+        'form_primary_button_html_class': 'btn-primary pull-right',
+        'wagtail_integration': {
+            'form_template_choices': [
+                (
+                    'fobi/bootstrap3_extras/view_embed_form_entry_ajax.html',
+                    gettext("Custom bootstrap3 embed form view template")
+                ),
+            ],
+            'success_page_template_choices': [
+                (
+                    'fobi/bootstrap3_extras/embed_form_entry_'
+                    'submitted_ajax.html',
+                    gettext("Custom bootstrap3 embed form entry submitted "
+                            "template")
+                ),
+            ],
+        },
+    },
+    'foundation5': {
+        'page_header_html_class': '',
+        'form_html_class': 'form-horizontal',
+        'form_button_outer_wrapper_html_class': 'control-group',
+        'form_button_wrapper_html_class': 'controls',
+        'form_button_html_class': 'radius button',
+        'form_primary_button_html_class': 'btn-primary',
+        'wagtail_integration': {
+            'form_template_choices': [
+                (
+                    'fobi/foundation5_extras/view_embed_form_entry_ajax.html',
+                    gettext("Custom foundation5 embed form view template")
+                ),
+            ],
+            'success_page_template_choices': [
+                (
+                    'fobi/foundation5_extras/embed_form_entry_submitted_'
+                    'ajax.html',
+                    gettext("Custom foundation5 embed form entry submitted "
+                            "template")
+                ),
+            ],
+        },
+    },
+    'simple': {
+        'page_header_html_class': '',
+        'form_html_class': 'form-horizontal',
+        'form_button_outer_wrapper_html_class': 'control-group',
+        'form_button_wrapper_html_class': 'submit-row',
+        'form_button_html_class': 'btn',
+        'form_primary_button_html_class': 'btn-primary',
+        'wagtail_integration': {
+        },
+    }
+}
