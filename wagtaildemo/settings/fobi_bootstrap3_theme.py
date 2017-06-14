@@ -6,6 +6,16 @@ def gettext(s):
 
 # Django settings for django-fobi integration project.
 
+LANGUAGE_CODE = 'en'
+
+LANGUAGES = (
+    ('en', gettext("English")),  # Main language!
+    ('hy', gettext("Armenian")),
+    ('nl', gettext("Dutch")),
+    ('ru', gettext("Russian")),
+    ('de', gettext("German")),
+)
+
 INSTALLED_APPS += (
     # Third party apps used in the project
     # 'tinymce',  # TinyMCE
@@ -132,6 +142,7 @@ INSTALLED_APPS += (
     # ***********************************************************************
     # ***********************************************************************
     'fobi.contrib.apps.wagtail_integration',
+    'fobi_demo',
 )
 
 TEMPLATES[0]['OPTIONS']['context_processors'] += [
