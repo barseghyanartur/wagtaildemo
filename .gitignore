@@ -17,6 +17,7 @@ ghostdriver.log
 codebin.py
 examples/mezzanine_example/dev.db
 wagtaildemo/settings/local.py
+static/
 
 MANIFEST.in~
 MIND_BUCKET.rst
