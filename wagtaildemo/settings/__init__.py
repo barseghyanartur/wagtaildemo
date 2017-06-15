@@ -1,1 +1,1 @@
-from .fobi_bootstrap3_theme import *
+from .fobi_integration import *

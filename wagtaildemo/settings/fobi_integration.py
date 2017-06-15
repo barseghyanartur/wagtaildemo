@@ -1,5 +1,6 @@
 from .dev import *
 
+# FOBI_DEFAULT_THEME = 'simple'
 
 def gettext(s):
     return s
@@ -170,14 +171,14 @@ FOBI_CUSTOM_THEME_DATA = {
             'form_template_choices': [
                 (
                     'fobi/bootstrap3_extras/view_embed_form_entry_ajax.html',
-                    gettext("Custom bootstrap3 embed form view template")
+                    gettext("Custom bootstrap3 form view template")
                 ),
             ],
             'success_page_template_choices': [
                 (
                     'fobi/bootstrap3_extras/embed_form_entry_'
                     'submitted_ajax.html',
-                    gettext("Custom bootstrap3 embed form entry submitted "
+                    gettext("Custom bootstrap3 form entry submitted "
                             "template")
                 ),
             ],
@@ -194,14 +195,14 @@ FOBI_CUSTOM_THEME_DATA = {
             'form_template_choices': [
                 (
                     'fobi/foundation5_extras/view_embed_form_entry_ajax.html',
-                    gettext("Custom foundation5 embed form view template")
+                    gettext("Custom foundation5 form view template")
                 ),
             ],
             'success_page_template_choices': [
                 (
                     'fobi/foundation5_extras/embed_form_entry_submitted_'
                     'ajax.html',
-                    gettext("Custom foundation5 embed form entry submitted "
+                    gettext("Custom foundation5 form entry submitted "
                             "template")
                 ),
             ],
@@ -215,6 +216,20 @@ FOBI_CUSTOM_THEME_DATA = {
         'form_button_html_class': 'btn',
         'form_primary_button_html_class': 'btn-primary',
         'wagtail_integration': {
+            'form_template_choices': [
+                (
+                    'fobi/simple_extras/view_embed_form_entry_ajax.html',
+                    gettext("Custom simple form view template")
+                ),
+            ],
+            'success_page_template_choices': [
+                (
+                    'fobi/simple_extras/embed_form_entry_'
+                    'submitted_ajax.html',
+                    gettext("Custom simple form entry submitted "
+                            "template")
+                ),
+            ],
         },
     }
 }
